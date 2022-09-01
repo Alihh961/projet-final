@@ -132,7 +132,8 @@ form button {
 
 .quatreprod {
   display: flex;
-  padding-top: 5%;
+  padding: 5% 0;
+
 }
 
 .quatreprod img {
@@ -167,4 +168,69 @@ font-size: 1.5em;
 
   content: "\a\a";
   white-space: pre;
+}
+
+.foot{
+
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0 3% 0;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 1) 2%,
+    rgba(255, 84, 32, 1) 75%
+  );
+
+}
+
+.foot address {
+font-weight: 700;
+}
+
+.foot address p{
+
+margin: 0;
+
+}
+
+.foot address a {
+
+text-decoration: none;
+color: black;
+
+}
+
+.foot address a:hover{
+
+text-decoration: underline;
+color: blue;
+
+}
+
+
+.fa a {
+  font-family: "Roboto Mono";
+  text-decoration: none;
+  color: black;
+}
+.fa-facebook-square{
+
+  color: blue;
+}
+
+.fa-instagram-square {
+
+  color: red;
+}
+
+footer figure {
+
+  text-align: center;
+  font-weight: 900;
+  color: slategray;
+}
+
+hr {
+
+  margin: 0;
 }
