@@ -5,6 +5,11 @@ body {
   font-family: "Roboto Mono";
 }
 
+hr {
+
+  margin: 0;
+}
+
 header {
   display: flex;
   justify-content: space-around;
@@ -230,7 +235,3 @@ footer figure {
   color: slategray;
 }
 
-hr {
-
-  margin: 0;
-}
