@@ -7,24 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="imgs/WIKA_Logo.svg.png" />
 
-    <title>Projet Final</title>
+    <title>Wika</title>
 </head>
 
 <body>
+
     <header>
-        <img src="imgs/WIKA_Logo.svg.png" alt="Logo">
-                   
-        <nav class="menu">
-            <a href="">Adidas</a>
-            <a href="">Jules</a>
-            <a href="">Levis</a>
-            <a href="">Calvin Klein</a>
-            <a href="">Celio</a>
+        <img src="imgs/WIKA_Logo.svg.png" alt="Logo" class="logo">
+
+        <nav>
+            <ul class="menu">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
 
         <div class="srch">
@@ -45,11 +51,12 @@
 
             <img src="imgs/adidas/chaussures/adidas-slider.webp" alt="Adidas">
 
-            <div class="">
+            <div>
 
-                <p>ADIDAS ORIGINALS<br>Baskets NY 90 FZ2247 Footwear White Royal Blue</p>
+                <h2>ADIDAS ORIGINALS</h2>
+                <h5>Baskets NY 90 FZ2247 Footwear White Royal Blue</h5>
                 <p><span class="adidasprixoriginal">82.99 €</span><span class="adidasprixsold"> 45.99 €</span></p>
-                <button class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></button>
+                <a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
 
             </div>
         </div>
@@ -60,9 +67,10 @@
 
             <div class="">
 
-                <p>Jules jean slim<br>Tom 4 longueurs en coton recyclé - Bleu</p>
+                <h2>JULES JEAN SLIM</h2>
+                <h5>Tom 4 longueurs en coton recyclé - Bleu</h5>
                 <p><span class="julesprixoriginal">65 €</span></p>
-                <button class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></button>
+                <a class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
 
 
             </div>
@@ -73,32 +81,53 @@
     <section class="quatreprod">
         <figure>
             <img src="imgs/adidas/haute/27db61ba645e4da185a8ae4e01010b5d_9366.webp" alt="adidas">
-            <figcaption>T-SHIRT ADICOLOR CLASSICS 3-STRIPES <br><span class="cat">Hommes Originals</span><span
-                    class="prix">35€</span><br><button class="ajouteraupanier"><i
-                        class="fa-solid fa-cart-plus"></i></button></figcaption>
+            <figcaption>
+                <p class="cat">Adidas <br> Hommes Originals</p>
+                <p>T-SHIRT ADICOLOR CLASSICS 3-STRIPES</p>
+                <p class="prix"><span>35€</span></p>
+                <div class='prixcart'><a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
+                </div>
+            </figcaption>
         </figure>
 
         <figure>
+
             <img src="imgs/adidas/pontalon/17400dd13a0a4a8c9913ada1012d0efd_9366.webp" alt="adidas">
-            <figcaption>PANTALON DE SURVÊTEMENT ADICOLOR <br><span class="cat">Hommes Originals</span><span
-                    class="prix">30€</span><br><button class="ajouteraupanier"><i
-                        class="fa-solid fa-cart-plus"></i></button></figcaption>
+            <figcaption>
+                <p class="cat">Adidas <br> Hommes Originals</p>
+                <p>PANTALON DE SURVÊTEMENT ADICOLOR</p>
+                <div class='prixcart'>
+                    <p class="prix">30€</p>
+                    <a href='#' class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
+                </div>
+            </figcaption>
+
         </figure>
+
         <figure>
+
             <img src="imgs/adidas/chaussettes/Socquettes_Cushioned_(3_paires)_Gris_DZ9383_03_standard.jpg" alt="adidas">
-            <figcaption>SOCQUETTES CUSHIONED (3 PAIRES) <br><span class="cat">Running</span><span
-                    class="prix">12€</span><br><button class="ajouteraupanier"><i
-                        class="fa-solid fa-cart-plus"></i></button></figcaption>
+            <figcaption>
+                <p class="cat">Adidas<br>Running</p>
+                <p>SOCQUETTES CUSHIONED (3 PAIRES)</p>
+                <p class="prix">12€</p>
+                <a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
+            </figcaption>
+
         </figure>
 
         <figure>
             <img src="imgs/adidas/chaussures/f7afc9ac90024b039508ac0200fc829c_9366.webp" alt="adidas">
-            <figcaption>CHAUSSURE RUN 60S 2.0 <br><span class="cat">Sportswear</span><span
-                    class="prix">45€</span><br><button class="ajouteraupanier"><i
-                        class="fa-solid fa-cart-plus"></i></button></figcaption>
+            <figcaption>
+                <p class="cat">Adidas<br>Sportswear</p>
+                <p>CHAUSSURE RUN 60S 2.0</p>
+                <p class="prix">45€</p>
+                <a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
+            </figcaption>
         </figure>
-    </section>
 
+    </section>
+    <button class="montreplus">Montre Plus</button>
     <hr>
 
     <footer>
@@ -111,9 +140,9 @@
                 <br>
                 <a href="tel:0033210203040">&#128222; 02 10 20 30 40</a>
             </address>
-       
 
-      
+
+
             <address>
                 <p>Lyon</p>
                 <p>231 Boulevard Jone Francky<br>69002</p>
@@ -121,9 +150,9 @@
                 <br>
                 <a href="tel:0033211223344">&#128222; 02 11 22 33 44</a>
             </address>
-      
 
-       
+
+
             <address>
                 <p>Nancy</p>
                 <p>29 Rue Turin <br>54001</p>
@@ -132,17 +161,17 @@
                 <a href="tel:0033210203040">&#128222; 02 11 21 31 41</a>
             </address>
 
-        <div>
-            <p>Suivez-nous</p>
-            <i class='fa fa-facebook-square'><a href="https://www.facebook.com/"> WikaFrance</a></i><br>
-            <i class='fa fa-instagram-square'><a href="https://www.instagram.com/"> WikaFrance</a></i>
-        </div>
-    </section>
-    <hr>
-    <figure>
-    <img src="imgs/WIKA_Logo.svg.png" alt="Logo">
-    <figcaption>Depuis 2004</figcaption>
-    </figure>
+            <div>
+                <p>Suivez-nous</p>
+                <i class='fa fa-facebook-square'><a href="https://www.facebook.com/"> WikaFrance</a></i><br>
+                <i class='fa fa-instagram-square'><a href="https://www.instagram.com/"> WikaFrance</a></i>
+            </div>
+        </section>
+        <hr>
+        <figure>
+            <img src="imgs/WIKA_Logo.svg.png" alt="Logo">
+            <figcaption>Depuis 2004</figcaption>
+        </figure>
     </footer>
 
 
