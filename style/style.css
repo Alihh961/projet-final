@@ -4,6 +4,7 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Mono";
   box-sizing: border-box;
+
 }
 
 
@@ -20,9 +21,10 @@ header {
   background: linear-gradient(169deg,
       rgba(255, 255, 255, 1) 2%,
       rgba(255, 84, 32, 1) 75%);
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 99;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 img[alt="Logo"] {
@@ -109,130 +111,142 @@ form button {
 
 /* Sliders */
 
-.slidecont {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  height: 550px;
-  /* min-height: ; */
-  margin: auto;
-  width: 66%;
-}
-
-.slide1 {
-  background-color: #278dff;
-  width: 100%;
-  font-weight: 900;
-  height: 454px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row wrap;
-  position: absolute;
+.swiper {
+  width: 75%;
+  height: 55%;
   border: solid black 1px;
-}
-
-.slide1 img{
-
- width: 40%;
+  background-color: #6A6DFF;
 
 }
 
-.slidecont div div {
 
+.swiper-slide {
   text-align: center;
-
-}
-
-
-
-.adidasprixsold {
-  color: red;
-  font-weight: 900;
-  font-size: 2rem;
-}
-
-.adidasprixoriginal {
-  transform: rotate(45deg);
-  color: white;
-  text-decoration: line-through;
-  text-decoration-color: black;
-  text-decoration-thickness: 20%;
-  font-size: 1.5rem;
-}
-
-.slide2 {
-  background-color: #278dff;
-  width: 100%;
-  height: 454px;
-  font-weight: 900;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row wrap;
-  position: absolute;
-  border: solid black 1px;
-
-}
-
-@media screen and (max-width: 925px) {
-
-  .slide2 {
-    flex-direction:column !important;
-
-  }
+  font-size: 18px;
   
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-.slide2 img {
 
- width: 40%;
+@media all and (max-width:1030px){
+
+.swiper-slide {
+
+flex-direction: column;
 
 }
 
-.julesprixoriginal {
+.swiper-slide img {
+ 
+  height: 300px;
+
+}
+
+
+
+}
+
+
+
+
+.swiper-slide img {
+  display: block;
+  width: 50%;
+  height: 450px;
+
+}
+
+.swiper-slide pre {
+
+  padding-left: 1%;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0;
+
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+
   color: white;
-  font-size: 1.5rem;
 }
+
+.slide-prix-sold {
+  font-size: 26px;
+  color: red;
+  font-weight: bold;
+
+}
+
+.ajouteraupanier {
+  display: block;
+  margin: 0 auto 10% auto;
+  width: fit-content;
+}
+
+
+
+
+
 
 /* Section de 4 produits */
 
-.quatreprod {
+.pro-mainpage {
   display: flex;
-  padding: 5% 0;
+  justify-content: space-around;
+  padding: 50px;
+  margin-bottom: 20px;
   flex-flow: row wrap;
 
 }
 
-.quatreprod img {
-  max-height: 22rem;
-  border-top-left-radius: 1%;
-  border-top-right-radius: 1%;
-}
-
-.quatreprod figure {
-  border-radius: 1%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+.product {
+  border-radius: 25px;
+  box-shadow: rgba(57,129,119, 0.3) 0px 5px 15px;
   margin: auto;
   margin-top: 3%;
+  width: 25%;
+  padding: 10px 12px;
+  border: solid black 1px;
+  text-align: center;
+  transition: 0.3s ease;
+  
 }
 
-.quatreprod figure:hover {
-
-  box-shadow: rgb(8, 129, 120, 5) 0px 5px 15px;
+.product:hover{
+  box-shadow: rgba(57,129,119, 0.6) 0px 5px 15px;
 }
 
-.quatreprod figcaption {
+.product img {
+  width: 92%;
+  height: 480px;
+  padding: 3%;
+  border-top-left-radius: 1%;
+  border-top-right-radius: 1%;
+  min-width: 250px;
+  border-radius: 20px;
+}
+
+.des {
   padding: 2%;
 }
 
-.quatreprod figcaption p:nth-child(2) {
 
-  font-weight: 700;
-
-}
-
-.cat {
+.des span {
   color: rgba(122, 118, 123, 1);
 }
 
@@ -252,7 +266,7 @@ form button {
 
 }
 
-.prix {
+.des h4 {
 
   font-weight: bold;
   font-size: 1.5em;
@@ -268,7 +282,7 @@ form button {
   display: block;
   border: none;
   padding: 1%;
-  border-top-left-radius:20px;
+  border-top-left-radius: 20px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 50px;
