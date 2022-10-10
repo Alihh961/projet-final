@@ -6,7 +6,29 @@ body {
   box-sizing: border-box;
 
 }
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
 
+h2{
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+h3{
+  font-size: calc(1.3rem + 0.6vw);
+} 
+
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+h5{
+  font-size: 1.25rem;
+}
+
+h6{
+  font-size: 1rem;
+}
 
 hr {
 
@@ -170,11 +192,7 @@ form button {
 
 }
 
-.ajouteraupanier {
-  display: block;
-  margin: 0 auto 10% auto;
-  width: fit-content;
-}
+
 
 
 
@@ -211,7 +229,7 @@ width: 100%;
 
 .pro-mainpage {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 3%;
   margin-bottom: 30px;
   flex-flow: row wrap;
@@ -221,10 +239,9 @@ width: 100%;
 .product {
   border-radius: 25px;
   box-shadow: rgba(57,129,119, 0.3) 0px 5px 15px;
-  margin: auto;
-  margin-top: 3%;
+  margin: 3% auto auto auto;
   width: 25%;
-  padding: 1.5% 2.5%;
+  padding: 1%;
   border: solid black 1px;
   text-align: center;
   transition: 0.3s ease;
@@ -236,8 +253,8 @@ width: 100%;
 }
 
 .product img {
-  width: 92%;
-  height: 300px;
+  width: 100%;
+  height: 220px;
   border-top-left-radius: 1%;
   border-top-right-radius: 1%;
   border-radius: 20px;
@@ -245,22 +262,38 @@ width: 100%;
 
 .des {
   padding: 2%;
+  margin-bottom: 2%;
 }
 
 
 .des span {
   color: rgba(122, 118, 123, 1);
+
+}
+.des h5 {
+  text-align: start;
+  margin: 3% 0;
 }
 
+.des h4 {
+  font-weight: bold;
+  margin: 0 0 2% 0;
+}
 .ajouteraupanier {
-
+  display: block;
   background-color: #398177;
   border: none;
   border-radius: 50%;
-  padding: 1% 1.5%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: black;
+  margin: 0 auto;
+  }
 
-}
+
 
 .ajouteraupanier:hover {
 
@@ -268,12 +301,7 @@ width: 100%;
 
 }
 
-.des h4 {
 
-  font-weight: bold;
-  font-size: 1.5em;
-
-}
 
 /* Button montre plus */
 
@@ -391,12 +419,13 @@ footer figure {
 
   .product {
     width: 42%;
-    height: 450px;
+    height: 400px;
     padding: 1%;
   } 
 
   .product h5{
     margin: 2% 0;
+    font-size: 0.75rem;
     }
 
   .product h4 {
@@ -414,12 +443,12 @@ footer figure {
 
 @media (max-width:428px){
 .product{
-height: 40vh;
+height: 355px;
 
 }
 
 .product img{
-  height: 25vh;
+  height: 200px;
 }
 
 .foot div:last-child{
