@@ -17,6 +17,9 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
+let aftercontent = document.getElementById("banniere-bas: :after");
+console.log(aftercontent);
+
 
 
 

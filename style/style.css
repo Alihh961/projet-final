@@ -217,14 +217,114 @@ flex-direction: column;
 
 #banniere-bas {
   width: 100%;
-  height: 31.3vw;
+  height: 31.4vw;
   margin-top: 5%;
   background-image: url(../imgs/banniere-1.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
 
 }
+
+#ban-sold {
+  display: block;
+  width: 10.7vw;
+  height: 6vw;
+  position: absolute;
+  top: 11.2%;
+  left: 5.2%;
+  cursor: pointer;
+}
+
+
+#ban-sold:after{
+  position: absolute;
+  content: "";
+  top: 83%;
+  left: 25%;
+  border-width: 2vw;
+  border-style: solid;
+  border-color: transparent transparent red transparent ;
+  animation-name:sold;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  animation-play-state:running;
+}
+
+@keyframes sold {
+
+  To{
+    top:67%
+  }
+}
+
+
+#ban-sold:before{
+  content: "Consultez nos produits solde";
+  text-decoration: none;
+  color: black;
+  font-size: 1.1vw;
+  font-weight: 900;
+  position: absolute;
+  top: 145%;
+  left: -22%;
+  width: fit-content;
+  text-align: center;
+  cursor: auto;
+}
+
+
+
+#ban-contact{
+  display: block;
+  width: 11.1vw;
+  font-weight: bold;
+  height: 10.9vw;
+  position: absolute;
+  top: 1%;
+  left: 80.6%;
+  cursor: pointer;
+}
+
+#ban-contact:after{
+  position: absolute;
+  content: "";
+  top: 31%;
+  left: 44%;
+  width: 5vw;
+  border-style: solid;
+  border-width: 2vw;
+  border-color:  transparent red transparent transparent ;
+  animation-name:contact;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-play-state:running;
+}
+
+@keyframes contact {
+
+  To{
+    left:36%
+  }
+}
+
+
+#ban-contact:before{
+  content: "Contacter nous par email";
+  text-decoration: none;
+  color: black;
+  font-size: 1.1vw;
+  position: absolute;
+  top: 20%;
+  left: 116.6%;
+  width: 5vw;
+  font-weight: 900;
+  text-align: center;
+  cursor: auto;
+}
+
+
 
 
 /* Section des produits */
