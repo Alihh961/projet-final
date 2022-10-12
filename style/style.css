@@ -6,23 +6,23 @@
 
 }
 h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.2rem + 1.5vw);
 }
 
 h2{
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.1rem + 0.9vw);
 }
 
 h3{
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.07rem + 0.6vw);
 } 
 
 h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.05rem + 0.3vw);
 }
 
 h5{
-  font-size: 1.25rem;
+  font-size: 1.02rem;
 }
 
 h6{
@@ -34,6 +34,10 @@ hr {
   margin: 1% 0 0 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 
 header {
   display: none;
@@ -71,8 +75,6 @@ img[alt="Logo"] {
 }
 
 .menu a {
-  text-decoration: none;
-  color: black;
   font-weight: 800;
   transition: 0.3s ease;
 }
@@ -133,55 +135,33 @@ form button {
 /* Sliders */
 
 .swiper {
-  width: 75%;
-  /* height:25vh; */
+  width: 100%;
   border: solid black 1px;
   background-color: #6A6DFF;
+  margin: 0;
 
 }
 
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
+  justify-content: space-around;
   align-items: center;
-}
+  text-align: center;
+  margin: 0;
+} 
 .swiper-slide img {
   display: block;
-  width: 45%;
-  height: 350px;
-
+  width: 40%;
+  height: 400px;
 }
 
-
-.swiper-slide pre {
-
-  padding-left: 1%;
+.swiper-slide div {
   display: flex;
   flex-flow: column wrap;
   margin: 0;
-
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-
-  color: white;
+  padding-left: 1%;
 }
 
 .slide-prix-sold {
@@ -191,38 +171,22 @@ form button {
 
 }
 
-
-
-
-
-@media all and (max-width:1050px){
-
-.swiper-slide {
-
-flex-direction: column;
-
-}
-
-.swiper-slide img {
- 
-  height: 300px;
-
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: red;
 }
 
 
-}
-
-
-/* Banniere-Haut page d'accueil */
+/* Banniere-bas page d'accueil */
 
 #banniere-bas {
   width: 100%;
-  height: 31.4vw;
+  height: 31.7vw;
   margin-top: 5%;
   background-image: url(../imgs/banniere-1.webp);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100vw;
   position: relative;
 
 }
@@ -262,9 +226,7 @@ flex-direction: column;
 
 #ban-sold:before{
   content: "Consultez nos produits solde";
-  text-decoration: none;
-  color: black;
-  font-size: 1.1vw;
+  font-size: 18px;
   font-weight: 900;
   position: absolute;
   top: 145%;
@@ -273,8 +235,6 @@ flex-direction: column;
   text-align: center;
   cursor: auto;
 }
-
-
 
 #ban-contact{
   display: block;
@@ -290,12 +250,11 @@ flex-direction: column;
 #ban-contact:after{
   position: absolute;
   content: "";
-  top: 31%;
-  left: 44%;
-  width: 5vw;
+  top: 93%;
+  left: 37%;
   border-style: solid;
   border-width: 2vw;
-  border-color:  transparent red transparent transparent ;
+  border-color:  transparent transparent red transparent ;
   animation-name:contact;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
@@ -305,20 +264,17 @@ flex-direction: column;
 @keyframes contact {
 
   To{
-    left:36%
+    top:83%
   }
 }
 
-
 #ban-contact:before{
   content: "Contacter nous par email";
-  text-decoration: none;
-  color: black;
-  font-size: 1.1vw;
+  font-size: 18px;
   position: absolute;
-  top: 20%;
-  left: 116.6%;
-  width: 5vw;
+  top: 130%;
+  left: 8%;
+  width: 100%;
   font-weight: 900;
   text-align: center;
   cursor: auto;
@@ -348,15 +304,6 @@ flex-direction: column;
   margin-top: 4%;
   box-shadow: rgba(57,129,119, 0.3) 0px 5px 15px;
   transition: 0.3s ease;
-}
-
-@media all and (max-width:550px){
-  .pro-mainpage{
-    justify-content: space-around;
-  }
-  .product {
-    min-width: 0;
-  }
 }
 
 .product:hover{
@@ -417,6 +364,7 @@ flex-direction: column;
 
 .montreplus {
   font-weight: 800;
+  color: black;
   margin: 0 auto;
   background-color: #398177;
   display: block;
@@ -432,7 +380,7 @@ flex-direction: column;
 
 .montreplus:hover {
 
-  background-color: red#278dff;
+  background-color:#278dff;
   border-top-left-radius: 50px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 50px;
@@ -468,11 +416,7 @@ flex-direction: column;
 
 
 .foot div a {
-
-  text-decoration: none;
-  color: black;
   font-size: 14px;
-
 }
 
 .foot div a:hover {
@@ -509,20 +453,38 @@ footer figure {
 
 /** Responsive pour la page d'accueil  **/
 
+
+/** Max Width 920px **/
+
 @media (max-width:920px){
-
-  .swiper-slide pre h2 {
-    /* font-size: 18px; */
+  .swiper{
+    width: 75%;
+    height: 400px;
+    justify-content: center;
+    text-align: center;
   }
 
-  .swiper-slide pre h5{
-    /* font-size: 12px; */
+  .swiper-slide{
+
   }
 
-  .swiper-slide pre{
-    font-size: 10px;
+  .swiper-slide div {
+    margin-bottom: 7%;
+  }
+  .swiper-slide img {
+    height:180px;
+    width: 40%;
   }
 
+  .slide-prix-sold {
+    font-size: 20px;
+  }
+
+  .slide-prix-original {
+    font-size: 18px;
+  }
+
+  
   .product {
     width: 42%;
     height: 450px;
@@ -541,14 +503,31 @@ footer figure {
       margin: 5% 0;;
     }
 
-  .swiper-slide img {
-    height: 250px;
-  }
+    #ban-contact:before , #ban-sold:before{
+      font-size: 14px;
+    }
 
   .foot div p ,.foot div a {
     font-size: 9px;
   }
 }
+
+/** Max Width 550px **/
+
+@media (max-width:550px){
+  .pro-mainpage{
+    justify-content: space-around;
+  }
+  .product {
+    min-width: 0;
+  }
+
+  #ban-contact:before , #ban-sold:before{
+    font-size: 10px;
+  }
+}
+
+/** Max Width 428px **/
 
 @media (max-width:428px){
 .product{
@@ -558,6 +537,10 @@ height: 355px;
 
 .product img{
   height: 200px;
+}
+
+#ban-contact:before , #ban-sold:before{
+  font-size: 8px;
 }
 
 .foot div:last-child{
@@ -573,28 +556,3 @@ height: 355px;
 }
 
 }
-
-h1 {
-  font-size: calc(1.375rem + 1.5vw);
-}
-
-h2{
-  font-size: calc(1.325rem + 0.9vw);
-}
-
-h3{
-  font-size: calc(1.3rem + 0.6vw);
-} 
-
-h4 {
-  font-size: calc(1.275rem + 0.3vw);
-}
-
-h5{
-  font-size: 1.25rem;
-}
-
-h6{
-  font-size: 1rem;
-}
-
