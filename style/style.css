@@ -483,15 +483,13 @@ footer figure {
   /**  Menuburger  **/
   header{
     position:relative;
-    padding: 1.5%;
- 
+    padding: 1.5% 5%;
   }
 
   nav{
     flex-direction: column;
     justify-content: flex-start;
     background-color:grey;
-    /* opacity: 0.9; */
     height: 100vh;
     position: fixed;
     top: 0;
@@ -546,9 +544,14 @@ footer figure {
     text-align: center;
   }
 
+  .swiper-slide{
+    flex-direction: column;
+  }
+
   .swiper-slide div {
     margin-bottom: 7%;
   }
+
   .swiper-slide img {
     height:180px;
     width: 40%;
@@ -569,6 +572,7 @@ footer figure {
     height: 450px;
     padding: 1%;
   } 
+
   .product img{
     height: 280px;
   }
@@ -576,17 +580,17 @@ footer figure {
   .product h5{
     margin: 2% 0;
     font-size: 0.75rem;
-    }
+  }
 
   .product h4 {
       margin: 5% 0;;
-    }
+  }
 
   /** bannierre **/
 
     #ban-contact:before , #ban-sold:before{
       font-size: 14px;
-    }
+  }
 
     /** Footer **/
 
