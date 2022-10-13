@@ -217,9 +217,11 @@ form button {
 }
 
 @keyframes sold {
-
-  To{
-    top:67%
+  From{
+    opacity:0;
+  }
+  To  {
+    top:67%;
   }
 }
 
@@ -262,7 +264,9 @@ form button {
 }
 
 @keyframes contact {
-
+  From{
+    opacity:0;
+  }
   To{
     top:83%
   }
