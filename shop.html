@@ -22,8 +22,8 @@
          <nav id="nav">
              <ul class="menu">
                  <li><a href="#" id="ferm-menu">X</a></li>
-                 <li><a href="home.html" class="active">Home</a></li>
-                 <li><a href="shop.html">Shop</a></li>
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="shop.html" class="active">Shop</a></li>
                  <li><a href="blog.html">Blog</a></li>
                  <li><a href="about.html">About</a></li>
                  <li><a href="contact.html">Contact</a></li>
@@ -39,7 +39,7 @@
          <a href="#nav"><i class="fa-solid fa-bars" id="ouvre-nav"></i></a>
      </header>
  
-     <section class="pro-mainpage">
+     <section class="pro-mainpage" id="produits-container" style="display:none;">
 
         <div class="product">
             <img src="imgs/produits-shop/adidas/chaussettes/3e8e64e9d00043fdab20abc60154d50e_9366.webp" alt="adidas-cht">
@@ -126,6 +126,7 @@
             </div>
         </div>
 
+       
         
         <div class="product">
             <img src="imgs/produits-accueil/adidas/27db61ba645e4da185a8ae4e01010b5d_9366.webp" alt="adidas-h">
@@ -298,9 +299,8 @@
             </div>
         </div>
 
-        
         <div class="product">
-            <img src="imgs/produits-accueil/adidas/27db61ba645e4da185a8ae4e01010b5d_9366.webp" alt="adidas-h">
+            <img src="imgs/produits-shop/adidas/chaussettes/3e8e64e9d00043fdab20abc60154d50e_9366.webp" alt="adidas-cht">
             <div class="des">
                 <span>Adidas</span>
                 <h5>T-SHIRT ADICOLOR</h5>
@@ -384,6 +384,7 @@
             </div>
         </div>
 
+       
         
         <div class="product">
             <img src="imgs/produits-accueil/adidas/27db61ba645e4da185a8ae4e01010b5d_9366.webp" alt="adidas-h">
@@ -439,48 +440,46 @@
                 <a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
         </div>
-
+        
         <div class="product">
-            <img src="imgs/produits-accueil/jules/1001193_17033_V1.webp" alt="jules-ch">
+            <img src="imgs/produits-accueil/celio/la-martina-chemise-la-martina-blanche-polo-team-anglaise-regular-fit-pour-homme.jpg" alt="celio-h">
             <div class="des">
-                <span>Jules</span>
-                <h5>CHAUSSURE GH0005</h5>
-                <h4>49€</h4>
+                <span>Celio</span>
+                <h5>CHEMISE BLANC</h5>
+                <h4>50€</h4>
                 <a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
         </div>
 
         <div class="product">
-            <img src="imgs/produits-accueil/jules/1001833_14488_V11.webp" alt="jules-h">
+            <img src="imgs/produits-accueil/celio/la-martina-chemise-la-martina-blanche-polo-team-anglaise-regular-fit-pour-homme.jpg" alt="celio-h">
             <div class="des">
-                <span>Jules</span>
-                <h5>CHEMISE KLM009</h5>
-                <h4>40€</h4>
+                <span>Celio</span>
+                <h5>CHEMISE BLANC</h5>
+                <h4>50€</h4>
                 <a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
         </div>
 
         <div class="product">
-            <img src="imgs/produits-accueil/jules/719527_9970_V11.webp" alt="jules-b">
+            <img src="imgs/produits-accueil/celio/la-martina-chemise-la-martina-blanche-polo-team-anglaise-regular-fit-pour-homme.jpg" alt="celio-h">
             <div class="des">
-                <span>Jules</span>
-                <h5>JEANS N507</h5>
-                <h4>35€</h4>
+                <span>Celio</span>
+                <h5>CHEMISE BLANC</h5>
+                <h4>50€</h4>
                 <a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
         </div>
-
+       
 
     </section>
+    <section class="pro-mainpage" id="produits-list"></section>
 
-
-
-
-
-
-
-
-
+    <div id="pagination">
+        <a href="javascript:prevProduits()" id="prev"><i class="fa-solid fa-arrow-left"></i></a>
+        <span id="page"></span>
+        <a href="javascript:nextProduits()" id="next"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
 
 <footer>
 

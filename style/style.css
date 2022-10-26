@@ -652,3 +652,27 @@ height: 355px;
 }
 
 }
+
+
+/* Shop Page */
+
+#pagination{
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+/* Arrow opacity  */
+
+.test {
+  opacity: 0.5;
+}
