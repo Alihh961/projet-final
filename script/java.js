@@ -1,47 +1,27 @@
-// Slider dans la page d'accueil 
-
-
-// var swiper = new Swiper(".mySwiper", {
-//   spaceBetween: 30,
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-   
-//   },
-// });
 
 
 // Paginattion pour shop page 
 
 
 
-var current_page = 1;
-var proAffi = 10;
+var pageActuelle = 1;
+var proAffi = 10; // Nombre(max) des produits qui seront affichés
 var produits = document.querySelectorAll('.product');
 var produitsContainer = document.getElementById('produits-list');
 
 function prevProduits()
 {
-    if (current_page > 1) {
-        current_page--;
-        changePage(current_page);
+    if (pageActuelle > 1) {
+        pageActuelle--;
+        changePage(pageActuelle);
     }
 }
 
 function nextProduits()
 {
-    if (current_page < numPages()) {
-        current_page++;
-        changePage(current_page);
+    if (pageActuelle < numPages()) {
+        pageActuelle++;
+        changePage(pageActuelle);
     }
 }
     
@@ -49,7 +29,7 @@ function changePage(page)
 {
     var next = document.getElementById("next");
     var prev = document.getElementById("prev");
-    var produitsContainer = document.getElementById('test');
+    var produitsContainer = document.getElementById('produits-list');
     var page_span = document.getElementById("page");
 
     if (page < 1) page = 1;

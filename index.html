@@ -19,6 +19,8 @@
     <link rel="icon" type="image/jpg" href="imgs/WIKA_Logo.svg.png" />
 
     <title>Wika</title>
+    
+
 </head>
 
 <body>
@@ -29,7 +31,7 @@
         <nav id="nav">
             <ul class="menu">
                 <li><a href="#" id="ferm-menu">X</a></li>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active index">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
@@ -94,7 +96,7 @@
             <div class="des">
                 <span>Adidas</span>
                 <h5>T-SHIRT ADICOLOR</h5>
-                <h4>35€</h4>
+                <h4>3511€</h4>
                 <a href="#" class="ajouteraupanier"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
 
@@ -227,8 +229,35 @@
         </figure>
     </footer>
 
+    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script/java.js"></script>
+    <script>
+        // Slider dans la page d'accueil 
+
+      
+
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        
+        },
+        });
+
+       
+    </script>
 </body>
 
 </html>
