@@ -671,8 +671,26 @@ height: 355px;
 }
 
 
-/* Arrow opacity  */
-
-.test {
-  opacity: 0.5;
+#ban-haut-shop{
+  width: 100vw;
+  height: 30vw;
+  background-image: url(/imgs/banniere-haut-shop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  opacity: 1;
+  position: relative;
 }
+
+#ban-haut-shop::after{
+  content:'';
+  width: 100vw;
+  height: 30vw;
+  background-image: url(/imgs/WIKA_Logo.svg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  opacity: 0.8;
+  position: absolute;
+  right: 0%;
+};

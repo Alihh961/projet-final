@@ -66,10 +66,10 @@ function changePage(page)
 
     if (page == numPages()) {
         next.style.opacity ='0.5';
-        next.style.cursor ='no-drop';
+        next.style.cursor ='pointer';
     } else {
         next.style.opacity ='1';
-        next.style.cursor ='auto';
+        next.style.cursor ='pointer';
     }
 }
 
