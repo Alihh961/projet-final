@@ -6,33 +6,29 @@
   /* overflow: hidden; */
 
 }
+
 h1 {
   font-size: calc(1.2rem + 1.5vw);
 }
 
-h2{
+h2 {
   font-size: calc(1.1rem + 0.9vw);
 }
 
-h3{
+h3 {
   font-size: calc(1.07rem + 0.6vw);
-} 
+}
 
 h4 {
   font-size: calc(1.05rem + 0.3vw);
 }
 
-h5{
+h5 {
   font-size: 1.02rem;
 }
 
-h6{
+h6 {
   font-size: 1rem;
-}
-
-hr {
-
-  margin: 1% 0 0 0;
 }
 
 a {
@@ -52,13 +48,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 99;
-  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.75);
   width: 100%;
   min-height: 25px;
   padding: 0.7%;
 }
 
-.logo-con{
+.logo-con {
   width: 7%;
   display: block;
 }
@@ -67,15 +63,16 @@ img[alt="Logo"] {
   width: 100%;
 }
 
-nav{
+nav {
   width: 75%;
   display: flex;
   justify-content: space-between;
 }
 
-#ouvre-nav{
+#ouvre-nav {
   display: none;
 }
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -83,7 +80,8 @@ nav{
   align-items: center;
   text-decoration: none;
 }
-.menu li:first-child{
+
+.menu li:first-child {
   display: none;
 }
 
@@ -101,9 +99,9 @@ nav{
 .menu a:hover,
 .menu a.active {
   text-decoration-color: black;
-   color: #088178; 
+  color: #088178;
 
-} 
+}
 
 .menu a.active::after,
 .menu a:hover::after {
@@ -120,10 +118,10 @@ nav{
 }
 
 @keyframes afterlines {
-From{
-  width: 0;
+  From {
+    width: 0;
   }
- }
+}
 
 
 .srch {
@@ -135,7 +133,7 @@ From{
 input[name="search"] {
   height: 25px;
   padding: 3%;
-  width:100%;
+  width: 100%;
 }
 
 input[name="search"]:focus {
@@ -171,7 +169,8 @@ form button {
   align-items: center;
   text-align: center;
   margin: 0;
-} 
+}
+
 .swiper-slide img {
   display: block;
   width: 40%;
@@ -223,31 +222,32 @@ form button {
 }
 
 
-#ban-sold:after{
+#ban-sold:after {
   position: absolute;
   content: "";
   top: 83%;
   left: 25%;
   border-width: 2vw;
   border-style: solid;
-  border-color: transparent transparent red transparent ;
-  animation-name:sold;
+  border-color: transparent transparent red transparent;
+  animation-name: sold;
   animation-duration: .8s;
   animation-iteration-count: infinite;
-  animation-play-state:running;
+  animation-play-state: running;
 }
 
 @keyframes sold {
-  From{
-    opacity:0;
+  From {
+    opacity: 0;
   }
-  To  {
-    top:67%;
+
+  To {
+    top: 67%;
   }
 }
 
 
-#ban-sold:before{
+#ban-sold:before {
   content: "Consultez nos produits solde";
   font-size: 18px;
   font-weight: 900;
@@ -259,7 +259,7 @@ form button {
   cursor: auto;
 }
 
-#ban-contact{
+#ban-contact {
   display: block;
   width: 11.1vw;
   font-weight: bold;
@@ -270,30 +270,31 @@ form button {
   cursor: pointer;
 }
 
-#ban-contact:after{
+#ban-contact:after {
   position: absolute;
   content: "";
   top: 93%;
   left: 37%;
   border-style: solid;
   border-width: 2vw;
-  border-color:  transparent transparent red transparent ;
-  animation-name:contact;
+  border-color: transparent transparent red transparent;
+  animation-name: contact;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
-  animation-play-state:running;
+  animation-play-state: running;
 }
 
 @keyframes contact {
-  From{
-    opacity:0;
+  From {
+    opacity: 0;
   }
-  To{
-    top:83%
+
+  To {
+    top: 83%
   }
 }
 
-#ban-contact:before{
+#ban-contact:before {
   content: "Contacter nous par email";
   font-size: 18px;
   position: absolute;
@@ -304,9 +305,6 @@ form button {
   text-align: center;
   cursor: auto;
 }
-
-
-
 
 /* Section des produits */
 
@@ -327,12 +325,12 @@ form button {
   border: solid black 1px;
   border-radius: 25px;
   margin-top: 4%;
-  box-shadow: rgba(57,129,119, 0.3) 0px 5px 15px;
+  box-shadow: rgba(57, 129, 119, 0.3) 0px 5px 15px;
   transition: 0.3s ease;
 }
 
-.product:hover{
-  box-shadow: rgba(57,129,119, 0.6) 0px 5px 15px;
+.product:hover {
+  box-shadow: rgba(57, 129, 119, 0.6) 0px 5px 15px;
 }
 
 .product img {
@@ -352,6 +350,7 @@ form button {
   color: rgba(122, 118, 123, 1);
 
 }
+
 .des h5 {
   text-align: start;
   margin: 3% 0;
@@ -361,6 +360,7 @@ form button {
   font-weight: bold;
   margin: 0 0 2% 0;
 }
+
 .ajouteraupanier {
   display: block;
   background-color: #398177;
@@ -373,7 +373,7 @@ form button {
   justify-content: center;
   color: black;
   margin: 0 auto;
-  }
+}
 
 
 
@@ -405,7 +405,7 @@ form button {
 
 .montreplus:hover {
 
-  background-color:#278dff;
+  background-color: #278dff;
   border-top-left-radius: 50px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 50px;
@@ -416,32 +416,38 @@ form button {
 
 /* Footer */
 
+footer {
+
+  background: linear-gradient(360deg,
+      rgba(255, 255, 255, 1) 2%,
+      rgba(255, 84, 32, 1) 75%);
+  font-size: 12px;
+}
 
 .foot {
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: row wrap;
   padding: 2%;
-  background: linear-gradient(360deg,
-      rgba(255, 255, 255, 1) 2%,
-      rgba(255, 84, 32, 1) 75%);
 
 }
 
 .foot div {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px; /** limiter le width de div ( wika-app div précisément ) **/
+  min-width: 229px;/** pour effectuer le wrap **/
+  flex: 1;
   font-weight: 700;
-  flex:1;
-  margin-left: 1%;
+  margin: 0 auto;/** les div va etre en centre apres wrap **/
+  line-height: 2;
 }
 
-.foot div:first-child{
-  margin-left: 0;
-}
+.foot div h3 {
+  color: white;
+  text-align: center;
 
-
-.foot div a {
-  font-size: 14px;
 }
 
 .foot div a:hover {
@@ -458,6 +464,10 @@ form button {
   color: black;
 }
 
+.fa-brands {
+  font-size: 25px;
+}
+
 .fa-facebook-square {
 
   color: blue;
@@ -466,6 +476,59 @@ form button {
 .fa-instagram-square {
 
   color: red;
+
+}
+
+.fa-twitter-square {
+
+  color: #4873ff;
+
+}
+
+
+.wika-app a {
+
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  border: solid #398177 1px;
+  padding: 2%;
+  border-radius: 5px;
+  width: 90%;
+  text-decoration: none;
+  font-size: 12px !important;
+
+
+}
+
+.wika-app a:first-of-type {
+
+  margin-bottom: 10px;
+
+}
+
+.wika-app a:hover {
+
+  text-decoration: none !important;
+  color: black !important;
+}
+.mdp{
+
+  margin: 10px auto;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+
+.mdp img{
+
+  /** control height for the responsive **/
+  height: 8vw;
+  max-height: 40px;
+  border-radius: 5px;
+
 }
 
 footer figure {
@@ -485,34 +548,34 @@ img[alt="Logo-footer"] {
 
 /** Max Width 920px **/
 
-@media (max-width:920px){
+@media (max-width:920px) {
 
   /*****     Header       *****/
 
   /**  Menuburger  **/
-  header{
-    position:relative;
+  header {
+    position: relative;
     padding: 1.5% 5%;
   }
 
-  nav{
+  nav {
     flex-direction: column;
     justify-content: flex-start;
-    background-color:grey;
+    background-color: grey;
     height: 100vh;
     position: fixed;
     top: 0;
     right: -300%;
   }
 
-  .menu{
+  .menu {
     flex-direction: column;
-    align-items:baseline;
+    align-items: baseline;
     position: relative;
     width: 100%;
   }
 
-  .menu li:first-child{
+  .menu li:first-child {
     display: block;
     font-size: 25px;
     position: absolute;
@@ -521,7 +584,8 @@ img[alt="Logo-footer"] {
     padding: 0;
   }
 
-  .menu li ,.srch form {
+  .menu li,
+  .srch form {
     padding: 4% 15%;
   }
 
@@ -529,31 +593,32 @@ img[alt="Logo-footer"] {
 
     color: black;
   }
+
   .menu a.active::after,
   .menu a:hover::after {
 
-  display: none;
+    display: none;
 
   }
 
-  #nav:target{ 
+  #nav:target {
     right: 0;
   }
 
-  #ouvre-nav{
+  #ouvre-nav {
     display: block;
   }
 
   /** Sliders **/
-  
-  .swiper{
+
+  .swiper {
     width: 75%;
     height: 400px;
     justify-content: center;
     text-align: center;
   }
 
-  .swiper-slide{
+  .swiper-slide {
     flex-direction: column;
   }
 
@@ -562,7 +627,7 @@ img[alt="Logo-footer"] {
   }
 
   .swiper-slide img {
-    height:180px;
+    height: 180px;
     width: 40%;
   }
 
@@ -575,88 +640,100 @@ img[alt="Logo-footer"] {
   }
 
   /** Product **/
-  
+
   .product {
     width: 42%;
     height: 450px;
     padding: 1%;
-  } 
+  }
 
-  .product img{
+  .product img {
     height: 280px;
   }
 
-  .product h5{
+  .product h5 {
     margin: 2% 0;
     font-size: 0.75rem;
   }
 
   .product h4 {
-      margin: 5% 0;;
+    margin: 5% 0;
+    ;
   }
 
   /** bannierre **/
 
-    #ban-contact:before , #ban-sold:before{
-      font-size: 14px;
+  #ban-contact:before,
+  #ban-sold:before {
+    font-size: 14px;
   }
 
-    /** Footer **/
+  /** Footer **/
 
-  .foot div p ,.foot div a {
+  .foot div p,
+  .foot div a {
     font-size: 9px;
+  }
+
+  .wika-app a span {
+
+    font-size: 9px;
+
   }
 }
 
 /** Max Width 550px **/
 
-@media (max-width:550px){
-  .pro-mainpage{
+@media (max-width:550px) {
+  .pro-mainpage {
     justify-content: space-around;
   }
+
   .product {
     min-width: 0;
   }
 
-  #ban-contact:before , #ban-sold:before{
+  #ban-contact:before,
+  #ban-sold:before {
     font-size: 10px;
   }
 }
 
 /** Max Width 428px **/
 
-@media (max-width:428px){
-.product{
-height: 355px;
+@media (max-width:428px) {
+  .product {
+    height: 355px;
 
-}
+  }
 
-.product img{
-  height: 200px;
-}
+  .product img {
+    height: 200px;
+  }
 
-#ban-contact:before , #ban-sold:before{
-  font-size: 8px;
-}
+  #ban-contact:before,
+  #ban-sold:before {
+    font-size: 8px;
+  }
 
-.foot div:last-child{
-  text-align: center;
-}
+  .foot div:last-child {
+    text-align: center;
+  }
 
-.foot div p {
- font-size: 8px;
-}
+  .foot div p {
+    font-size: 8px;
+  }
 
-.foot div a {
-  font-size: 8px;
-}
+  .foot div a {
+    font-size: 8px;
+  }
 
 }
 
 
 /* Shop Page */
 
-#pagination{
+#pagination {
   text-align: center;
   margin-bottom: 4%;
 }
@@ -671,7 +748,7 @@ height: 355px;
 }
 
 
-#ban-haut-shop{
+#ban-haut-shop {
   width: 100vw;
   height: 30vw;
   background-image: url(../imgs/banniere-haut-shop.jpg);
@@ -682,8 +759,8 @@ height: 355px;
   position: relative;
 }
 
-#ban-haut-shop::after{
-  content:'';
+#ban-haut-shop::after {
+  content: '';
   width: 100vw;
   height: 30vw;
   background-image: url(../imgs/WIKA_Logo.svg.png);
@@ -693,4 +770,6 @@ height: 355px;
   opacity: 1;
   position: absolute;
   right: 0%;
-};
+}
+
+;
