@@ -96,8 +96,8 @@ nav {
   position: relative;
 }
 
-.menu a:hover,
-.menu a.active {
+.menu a:hover,.menu a.active,
+.menu a.active:hover {
   text-decoration-color: black;
   color: #088178;
 
