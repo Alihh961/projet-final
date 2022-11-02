@@ -140,10 +140,10 @@ input[name="search"]:focus {
   outline: none;
 }
 
-form {
+form[action="header.php"] {
   display: flex;
   justify-content: center;
-}
+} 
 
 form button {
   background-color: #088178;
@@ -394,19 +394,21 @@ form button {
 }
 
 .montreplus {
+
   font-weight: 800;
   color: black;
   margin: 0 auto;
   background-color: #398177;
   display: block;
   border: none;
-  padding: 1%;
+  padding: 1% 2%;
   border-top-left-radius: 20px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 50px;
   cursor: pointer;
   transition: all 0.7s;
+
 }
 
 .montreplus:hover {
@@ -416,7 +418,6 @@ form button {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 20px;
-  border: solid black 2px;
 
 }
 
@@ -783,3 +784,60 @@ img[alt="Logo-footer"] {
 
 /** Contact Page **/
 
+
+
+input[id='prenom-c'],input[id='nom-c'],input[id='phone-c'] ,textarea {
+
+  width: 100%;
+  padding: 2%;
+  border: 1px solid rgba(255, 84, 32, 1);
+  border-radius: 4px;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  resize:none;
+  
+
+}
+
+
+/* input[id='prenom-c']:focus,input[id='nom-c']:focus,input[id='phone-c']:focus,textarea:focus{
+  outline: none;
+} */
+
+input[type=submit] {
+
+  font-weight: 800;
+  color: black;
+  margin: 0 auto;
+  background-color: #398177;
+  display: block;
+  border: none;
+  padding: 2% 3%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 50px;
+  cursor: pointer;
+  transition: all 0.7s;
+
+}
+
+input[type=submit]:hover {
+
+  background-color: #278dff;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 20px;
+
+}
+
+.form-con {
+
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 2%;
+  width: 50%;
+  margin: 55px auto;
+
+}
