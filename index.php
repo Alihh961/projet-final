@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if(isset($_SESSION["connecter"])){
-    header("location:indexM.php");//* me rediriger vers la session si l'utilisateur est déjà connecté *//
+    header("location:indexM.php");//* eviter que l'utilisateur entre manual le url , me rediriger vers la page log-in si l'utilisateur n'est pas connecté *//
 }
 
 ?>
@@ -262,4 +262,3 @@ if(isset($_SESSION["connecter"])){
     
 </body>
 
-</html>

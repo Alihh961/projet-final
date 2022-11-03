@@ -6,7 +6,9 @@ console.log(titlePage.item(0).innerHTML);
 
 //******************** Slider dans la page d'accueil  ****************************//
 
+
 if(titlePage.item(0).innerHTML.indexOf('Wika') !== 1 ) {
+
 
  var swiper = new Swiper(".mySwiper",  {
     spaceBetween: 30,
