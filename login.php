@@ -1,9 +1,9 @@
 <?php
  
 session_start();
-// if(isset($_SESSION["connecter"])){
-//     header("location:session.php");//* me rediriger vers la session si l'utilisateur est déjà connecté *//
-// }
+if(isset($_SESSION["connecter"])){
+    header("location:indexM.php");//* me rediriger vers la session si l'utilisateur est déjà connecté *//
+}
 // $pageTitle="login";
 $erreur = "";
 if (isset($_POST["valider"])) {

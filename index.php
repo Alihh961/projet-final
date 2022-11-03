@@ -1,10 +1,11 @@
-<?php
+<?php 
 session_start();
- if(!(isset($_SESSION["connecter"]))){
-    header("location:login.php");//* eviter que l'utilisateur ecrire le url manual , me rediriger vers la page login si l'utilisateur n'est pas connecté *//
+if(isset($_SESSION["connecter"])){
+    header("location:indexM.php");//* me rediriger vers la session si l'utilisateur est déjà connecté *//
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@ session_start();
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style/style.css">
+
 
     <link rel="icon" type="image/jpg" href="imgs/WIKA_Logo.svg.png" />
 
@@ -43,8 +44,7 @@ session_start();
                 <!-- <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li id="user"><?php echo $_SESSION["prenom_nom"];?></li>
-                <li><a href="deconnexion.php">Deconnecter</a></li>
+                <li><a id="ll" href="login.php">Login</a></li>
             </ul>
             <div class="srch">
                 <form action="header.php" method="POST">
