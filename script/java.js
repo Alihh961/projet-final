@@ -6,7 +6,11 @@ console.log(titlePage.item(0).innerHTML);
 
 //******************** Slider dans la page d'accueil  ****************************//
 
-if(body.innerHTML.indexOf('Wika') !== 1 ) {
+
+
+
+if(titlePage.innerHTML.indexOf('Wika') !== 1 ) {
+
 
  var swiper = new Swiper(".mySwiper",  {
     spaceBetween: 30,
@@ -108,7 +112,6 @@ window.onload = function() {
 console.log(titlePage.item(0).innerHTML);
 };
 
-console.log(titlePage.item(0).innerHTML);
 
 
 
