@@ -1,9 +1,12 @@
 
- const titlePage = document.getElementsByTagName('title');  // Utilisé pour savoir dans quelle page nous sommes
+const titlePage = document.getElementsByTagName('title');  // Utilisé pour savoir dans quelle page nous sommes
+console.log(titlePage.item(0).innerHTML);
+
+
 
 //******************** Slider dans la page d'accueil  ****************************//
 
-if(titlePage.item(0).innerHTML ==="Wika") {
+if(body.innerHTML.indexOf('swipper') !== 1 ) {
 
  var swiper = new Swiper(".mySwiper",  {
     spaceBetween: 30,
@@ -41,7 +44,7 @@ var produitsContainer = document.getElementById('produits-list'); // le conteneu
 
 function numPages()
 {
-    return Math.ceil(produits.length / proAffi); // 4 pages
+    // return Math.ceil(produits.length / proAffi); // 4 pages
 };
 
 // Arrows control selon la page actuelle
@@ -102,8 +105,11 @@ function changePage(page)
 window.onload = function() {
     changePage(1);
 };
-console.log(titleShop.item(0).innerHTML);
+console.log(titlePage.item(0).innerHTML);
 };
+
+console.log(titlePage.item(0).innerHTML);
+
 
 
 
