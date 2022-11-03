@@ -108,7 +108,6 @@ window.onload = function() {
 console.log(titlePage.item(0).innerHTML);
 };
 
-console.log(titlePage.item(0).innerHTML);
 
 
 
