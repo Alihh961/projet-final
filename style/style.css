@@ -743,6 +743,7 @@ img[alt="Logo-footer"] {
 #pagination {
   text-align: center;
   padding-bottom: 4%;
+  padding-top: 4%;
   background: rgb(255 84 32 / 50%);
 }
 
@@ -795,14 +796,26 @@ input[id='prenom-c'],input[id='nom-c'],input[id='phone-c'] ,textarea {
   margin-top: 2%;
   margin-bottom: 4%;
   resize:none;
-  
 
 }
 
+/* input[type=number]{
 
-/* input[id='prenom-c']:focus,input[id='nom-c']:focus,input[id='phone-c']:focus,textarea:focus{
-  outline: none;
+  -moz-appearance: textfield; désactiver les flèches pour les inputs de type ' number 'fonctionne avec firefox
+
 } */
+
+/* input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+
+  -webkit-appearance: none; désactiver les flèches pour les inputs de type ' number 'fonctionne avec les autres navigateurs
+
+} */
+
+input[id='prenom-c']:focus,input[id='nom-c']:focus,input[id='phone-c']:focus,textarea:focus{
+
+  outline: none;
+  
+}
 
 input[type=submit] {
 
@@ -829,7 +842,7 @@ input[type=submit]:hover {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 20px;
-
+  
 }
 
 .form-con {
@@ -841,3 +854,14 @@ input[type=submit]:hover {
   margin: 55px auto;
 
 }
+
+
+/** indexM (index Membre page ) **/
+
+#user{
+
+font-weight: 700;
+color: blue;
+
+}
+

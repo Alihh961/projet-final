@@ -1,16 +1,17 @@
 <?php
  
-session_start();
-if ($_SESSION["connecter"] != "yes") {
-header("location:login.php");
-exit();
-}
-if (date("H") < 18)
-$bienvenue = "Bonjour et bienvenue "  .
-$_SESSION["prenom_nom"];
-else
-$bienvenue = "Bonsoir et bienvenue "  .
-$_SESSION["prenom_nom"];
+// session_start();
+// if ($_SESSION["connecter"] != "oui") {/* si la connexion a n'été pas effectuée, redireger vers login page .sinon continue  */
+// header("location:login.php");
+// exit();
+// }
+
+// if (date("H") < 18)
+// $bienvenue = "Bonjour et bienvenue "  .
+// $_SESSION["prenom_nom"];
+// else
+// $bienvenue = "Bonsoir et bienvenue "  .
+// $_SESSION["prenom_nom"];
 ?>
  
 <!DOCTYPE  html>

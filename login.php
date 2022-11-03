@@ -1,20 +1,25 @@
 <?php
  
 session_start();
-
+// if(isset($_SESSION["connecter"])){
+//     header("location:session.php");//* me rediriger vers la session si l'utilisateur est déjà connecté *//
+// }
+// $pageTitle="login";
 $erreur = "";
 if (isset($_POST["valider"])) {
-include("infos.php");
-include("connexion.php");
-$verify = $pdo->prepare("select * from wika where email=? and password=? limit 1");
-$verify->execute(array($email, $pass_crypt));
-$user = $verify->fetchAll();
-if (count($user) > 0) {
+include("infos.php"); /* recuperer les infos entre pas l'utilisateur */
+include("connexion.php"); /* connecter a la base de donne */
+$stmt = $pdo->prepare("select * from wika where email=? and password=? limit 1");
+$stmt->execute(array($email, $pass_crypt));
+$user = $stmt->fetchAll();
+$userCount = $stmt->rowCount();
+
+if ($userCount > 0) /* si l'email existe et le mdp est bonne , ouvrir la session */ {
 
 $_SESSION["prenom_nom"] = ucfirst(strtolower($user[0]["prenom"])) .
 " "  .  strtoupper($user[0]["nom"]);
-$_SESSION["connecter"] = "yes";
-header("location:session.php");
+$_SESSION["connecter"] = "oui";
+header("location:indexM.php");
 } else
 header("location:login.php") ;
 
