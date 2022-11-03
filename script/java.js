@@ -9,7 +9,7 @@ console.log(titlePage.item(0).innerHTML);
 
 
 
-if(titlePage.innerHTML.indexOf('Wika') !== 1 ) {
+if(titlePage.item(0).innerHTML.indexOf('Wika') !== 1 ) {
 
 
  var swiper = new Swiper(".mySwiper",  {
