@@ -46,7 +46,7 @@ var produitsContainer = document.getElementById('produits-list'); // le conteneu
 
 function numPages()
 {
-    // return Math.ceil(produits.length / proAffi); // 4 pages
+    return Math.ceil(produits.length / proAffi); // 4 pages
 };
 
 // Arrows control selon la page actuelle
