@@ -39,7 +39,7 @@ if(isset($_SESSION["connecter"])){
         <nav id="nav">
             <ul class="menu">
                 <li><a href="#" id="ferm-menu">X</a></li>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="about.html">About</a></li>
