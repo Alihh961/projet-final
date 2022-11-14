@@ -1,27 +1,32 @@
 <?php
-
-
 session_start();
+
+
+if(isset($_SESSION["connecter"])){
+    header("location:index.php");//* me rediriger vers la session si l'utilisateur est déjà connecté *//
+}
 
 $erreur = "";
 if (isset($_POST["valider"])) {
-include("infos.php");
-include("connexion.php");
-$verify = $pdo->prepare("select * from users where pseudo=? and password=? limit 1");
-$verify->execute(array($pseudo, $pass_crypt));
-$user = $verify->fetchAll();
-if (count($user) > 0) {
-
-$_SESSION["prenom_nom"] = ucfirst(strtolower($user[0]["prenom"])) .
-" "  .  strtoupper($user[0]["nom"]);
-$_SESSION["connecter"] = "yes";
-
-header("location:session.php");
-
-} else
-header("location:login.php") ;
-
-}
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $pass_crypt = md5($_POST["password"]);/* recuperer les infos entre pas l'utilisateur */
+    include("connexion.php"); /* connecter a la base de donne */
+    $stmt = $pdo->prepare("select * from wika where email=? and password=? limit 1");
+    $stmt->execute(array($email, $pass_crypt));
+    $user = $stmt->fetchAll();
+    $userCount = $stmt->rowCount();
+    if ($userCount > 0) /* si l'email existe et le mdp est bonne , ouvrir la session */ {
+        $_SESSION["prenom_nom"] = ucfirst(strtolower($user[0]["prenom"])) .
+        " "  .  strtoupper($user[0]["nom"]);
+        $_SESSION["connecter"] = "oui";
+    
+        header("location:index.php");
+    } 
+    else{
+        $erreur='Mot de passe ou Email erreur !';
+    // header("location:login.php") ;
+    }}
 ?>
  
 <!DOCTYPE  html>
@@ -30,10 +35,11 @@ header("location:login.php") ;
 <meta  charset="utf-8"  />
 <style>
 * {
-font-family: arial;
-}
-body {
-margin: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono";
+  box-sizing: border-box;
+
 }
  
 form {
@@ -88,12 +94,12 @@ text-decoration: underline;
 }
 </style>
 </head>
-<body  onLoad="document.fo.login.focus()">
+<body>
 <h1>Authentification</h1>
 <div  class="erreur"><?php  echo  $erreur  ?></div>
 <form  name="form"  method="post"  action="">
 
-<input  type="text"  name="pseudo"  placeholder="Votre Pseudo"  /><br  />
+<input  type="text"  name="email"  placeholder="Votre Email"  /><br  />
 
 <input  type="password"  name="password"  placeholder="Mot de passe"  /><br  />
 <input  type="submit"  name="valider"  value="S'authentifier"  />

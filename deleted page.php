@@ -1,35 +1,11 @@
-<?php 
+<?php
 session_start();
-
-$log_in='Log-in';
-$username = $quitter = '' ;
-
-include('functions.php') ;
-if(isset($_SESSION["connecter"])){
-    $log_in='';
-    $username = $_SESSION["prenom_nom"];
-    $quitter = 'Deconnecter';
-    // header("location:indexM.php");//* eviter que l'utilisateur entre manual le url , me rediriger vers la page log-in si l'utilisateur n'est pas connecté *//
-};
-
-// if((isset($_SESSION["connecter"]))){
-
-//     $user=
-
-if(isset($_POST["ajouteraupanier"])){
-
-    print_r($_POST["produit_id"]);
-    
-};
-
-
-
-
-
+include('functions.php');
+ if(!(isset($_SESSION["connecter"]))){
+    header("location:login.php");//* eviter que l'utilisateur ecrire le url manual , me rediriger vers la page login si l'utilisateur n'est pas connecté *//
+}
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +13,7 @@ if(isset($_POST["ajouteraupanier"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,25 +22,9 @@ if(isset($_POST["ajouteraupanier"])){
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="style/style.css">
 
     <link rel="icon" type="image/jpg" href="imgs/WIKA_Logo.svg.png" />
-    <style>
-    .ajouteraupanier {
-  display: block;
-  background-color: #398177;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  margin: 0 auto;
-  cursor: pointer;
-}
-</style>
 
     <title>Wika</title>
     
@@ -81,30 +41,16 @@ if(isset($_POST["ajouteraupanier"])){
                 <li><a href="#" id="ferm-menu">X</a></li>
                 <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
+                <!-- <li><a href="blog.php">Blog</a></li> -->
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a id="log-in" href="login.php"><?php echo $log_in ?> </a></li>
-                <a href="#" class="ajouteraupanier"><i class="fa fa-shopping-basket"></i></a>
+                <li id="user"><?php echo $_SESSION["prenom_nom"];?></li>
             </ul>
-
-            <div class="menu-deroulant">
-
-                <button class="profil-btn" id="profil-btn"><?php echo $username?></button>
-                
-                <div class="profil-contenu" id="profil-contenu">
-                    <a href="#">Editer le profil</a>
-                    <a href="#">Commandes en cours</a>
-                    <a href="#">Commandes Passé</a>
-                   
-                </div>
-
-            </div>
-
-            <div class="srch">
+            <!-- <div class="srch">
                 <form action="header.php" method="POST">
                     <input type="text" placeholder="Search..." name="search" autocomplete="off" size="20">
                     <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
+                </form> -->
             </div>
         </nav>
 
@@ -153,28 +99,34 @@ if(isset($_POST["ajouteraupanier"])){
 
     
     <section class="pro-mainpage">
-        <?php
 
-            $id = $marque = $details = $prix = $src = '';
-            include('connexion.php');
-            $stmt = $pdo->prepare("SELECT * FROM `produits` ");
-            $stmt->execute();
 
-            $result = $stmt->fetchAll();
+   <?php
 
-            for($i=0;$i< count($result);$i++){
-                $id = $result[$i]["id"] ;
-                $marque = $result[$i]["marque"];
-                $details = $result[$i]["details"];
-                $prix = $result[$i]["prix"];
-                $src =$result[$i]["source"];
+   $id = $marque = $details = $prix = $src = '';
+   include('connexion.php');
+   $stmt = $pdo->prepare("SELECT * FROM `produits` ");
+   $stmt->execute();
 
-                createProduit($src,$marque,$details,$prix.'€',$id); 
-            
-        }
-        // debug_to_console($src);
+   $result = $stmt->fetchAll();
+   // echo "<pre>";
+   // print_r($result);
 
-        ?>
+   for($i=0;$i< count($result);$i++){
+       $id = $result[$i]["id"] ;
+       $marque = $result[$i]["marque"];
+       $details = $result[$i]["details"];
+       $prix = $result[$i]["prix"];
+       $src =$result[$i]["source"];
+
+       createProduit("$src","$marque","$details",$prix.'€',$id); 
+
+   
+    }
+
+    ?>
+
+
 
     </section>
     
@@ -186,14 +138,15 @@ if(isset($_POST["ajouteraupanier"])){
         <a href="http://www.google.com" id="ban-sold"></a>
         <a href="mailto:wika@wika.com" id="ban-contact"></a>
     </section>
+
     <?php
 
         include('footer.html');
 
     ?>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script/java.js"></script>
     
 </body>
 
+</html>

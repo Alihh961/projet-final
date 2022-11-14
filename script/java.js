@@ -1,3 +1,31 @@
+//********************  Profil contenu ****************************//
+
+
+
+let profil_btn=document.getElementById("profil-btn");
+
+profil_btn.onclick = function() {myFunction()};
+  function myFunction() {
+  document.getElementById("profil-contenu").classList.toggle("montre");
+}
+
+window.onclick = function(event) {
+ if (!event.target.matches('.profil-btn')) {
+    var dropdowns = document.getElementsByClassName("profil-contenu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('montre')) {
+        openDropdown.classList.remove('montre');
+      }
+    }
+  }}
+
+
+
+
+
+
 
 const titlePage = document.getElementsByTagName('title');  // Utilisé pour savoir dans quelle page nous sommes
 console.log(titlePage.item(0).innerHTML);

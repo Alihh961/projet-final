@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Roboto Mono";
   box-sizing: border-box;
+  
   /* overflow: hidden; */
 
 }
@@ -76,7 +77,7 @@ nav {
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 100%;
   align-items: center;
   text-decoration: none;
 }
@@ -124,6 +125,56 @@ nav {
 }
 
 
+/** menu déroulant **/
+.profil-btn {
+  background-color: #398177;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.profil-btn:hover, .profil-btn:focus {
+  background-color: #278dff;
+}
+
+.menu-deroulant {
+  position: relative;
+  display: inline-block;
+}
+
+.profil-contenu {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.profil-contenu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-deroulant a:hover {
+  background-color: #ddd;
+
+}
+
+.montre {
+  
+  display: block;
+}
+
+
+
+/* search input */
+
 .srch {
   display: flex;
   align-items: center;
@@ -155,6 +206,7 @@ form button {
 
 .swiper {
   width: 100%;
+  max-height: 500px;
   border: solid black 1px;
   background-color: #6A6DFF;
   margin: auto;
@@ -372,6 +424,7 @@ form button {
   justify-content: center;
   color: black;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 
@@ -787,7 +840,7 @@ img[alt="Logo-footer"] {
 
 
 
-input[id='prenom-c'],input[id='nom-c'],input[id='phone-c'] ,textarea {
+input[id='prenom-c'],input[id='nom-c'],input[id='email-c'] ,textarea {
 
   width: 100%;
   padding: 2%;
@@ -811,7 +864,7 @@ input[id='prenom-c'],input[id='nom-c'],input[id='phone-c'] ,textarea {
 
 } */
 
-input[id='prenom-c']:focus,input[id='nom-c']:focus,input[id='phone-c']:focus,textarea:focus{
+input[id='prenom-c']:focus,input[id='nom-c']:focus,input[id='email-c']:focus,textarea:focus{
 
   outline: none;
   
@@ -845,7 +898,7 @@ input[type=submit]:hover {
   
 }
 
-.form-con {
+.form-m {
 
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -855,13 +908,57 @@ input[type=submit]:hover {
 
 }
 
+.form-m > form > label > span {
 
-/** indexM (index Membre page ) **/
+  color: red;
+  font-weight: bold;
 
-#user{
+}
+
+.erreur {
+
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+   
+  }
+
+  .merci {
+
+    text-align: center;
+    color: rgba(255, 84, 32, 1);
+    margin-top: 10px;
+    font-weight: bold;
+
+  }
+
+
+/** index ( Membre page ) **/
+
+/* #log-in{
+
+
+
+} */
+
+
+/* #user{
 
 font-weight: 700;
 color: blue;
 
 }
+
+#user:hover{
+
+  text-decoration: none;
+  
+}
+
+#user:hover::after{
+
+  display: none !important;
+  
+  } */
 
