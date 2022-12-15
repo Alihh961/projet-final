@@ -1,20 +1,21 @@
 <?php 
 session_start();
 
-$log_in='Log-in';
-$username = $quitter = '' ;
+$username = '' ;
+$wiko = '';
 
 include('functions.php') ;
 if(isset($_SESSION["connecter"])){
-    $log_in='';
+    // $log_in='';
     $username = $_SESSION["prenom_nom"];
-    $quitter = 'Deconnecter';
-    // header("location:indexM.php");//* eviter que l'utilisateur entre manual le url , me rediriger vers la page log-in si l'utilisateur n'est pas connecté *//
+
+    // affichager de btn de profil et cache log-in 
+    $wiko ='<style>.profil-btn { display:inline-block;}</style>'.'<style>#log-in { display:none;}</style>';
+    
+
+
 };
 
-// if((isset($_SESSION["connecter"]))){
-
-//     $user=
 
 if(isset($_POST["ajouteraupanier"])){
 
@@ -50,20 +51,21 @@ if(isset($_POST["ajouteraupanier"])){
 
     <link rel="icon" type="image/jpg" href="imgs/WIKA_Logo.svg.png" />
     <style>
-    .ajouteraupanier {
-  display: block;
-  background-color: #398177;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  margin: 0 auto;
-  cursor: pointer;
-}
+    .fa-shopping-basket {
+    
+        background-color: #398177;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        margin: 0 auto;
+        cursor: pointer;
+        
+    }
 </style>
 
     <title>Wika</title>
@@ -72,6 +74,9 @@ if(isset($_POST["ajouteraupanier"])){
 </head>
 
 <body>
+
+    <?php echo $wiko ?> 
+
 
     <header>
        <a href="index.html" class="logo-con"><img src="imgs/WIKA_Logo.svg.png" alt="Logo" class="logo"></a>
@@ -83,18 +88,20 @@ if(isset($_POST["ajouteraupanier"])){
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a id="log-in" href="login.php"><?php echo $log_in ?> </a></li>
-                <a href="#" class="ajouteraupanier"><i class="fa fa-shopping-basket"></i></a>
+                <li><a id="log-in" href="login.php">Log-in</a></li>
+                <a href="#"><i class="fa fa-shopping-basket"></i></a>
             </ul>
 
             <div class="menu-deroulant">
 
-                <button class="profil-btn" id="profil-btn"><?php echo $username?></button>
+                <button class="profil-btn" id="profil-btn"><?php echo $username?><i class="fa fa-caret-down"></i></button>
                 
                 <div class="profil-contenu" id="profil-contenu">
-                    <a href="#">Editer le profil</a>
+                    <a href="edit_profil.php">Editer le profil</a>
                     <a href="#">Commandes en cours</a>
                     <a href="#">Commandes Passé</a>
+                    <a href="deconnexion.php">Deconnecter</a>
+
                    
                 </div>
 

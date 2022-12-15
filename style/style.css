@@ -3,7 +3,7 @@
   padding: 0;
   font-family: "Roboto Mono";
   box-sizing: border-box;
-  
+
   /* overflow: hidden; */
 
 }
@@ -88,16 +88,21 @@ nav {
 
 .menu li {
   list-style-type: none;
-  padding: 0 4%;
+  padding: 0 3%;
 }
 
 .menu a {
+  /* display: flex; */
   font-weight: 800;
   transition: 0.4s ease;
   position: relative;
+
 }
 
-.menu a:hover,.menu a.active,
+
+
+.menu a:hover,
+.menu a.active,
 .menu a.active:hover {
   text-decoration-color: black;
   color: #088178;
@@ -125,17 +130,22 @@ nav {
 }
 
 
+
 /** menu déroulant **/
 .profil-btn {
+  display:none;
   background-color: #398177;
   color: white;
-  padding: 16px;
+  padding: 10px !important;
   font-size: 16px;
+  width: max-content;
   border: none;
+  margin-right: 10px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
-.profil-btn:hover, .profil-btn:focus {
+.profil-btn:hover {
   background-color: #278dff;
 }
 
@@ -145,33 +155,41 @@ nav {
 }
 
 .profil-contenu {
+
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+
 }
 
 .profil-contenu a {
-  color: black;
+
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
+.fa-caret-down{
+
+padding-left: 5px;
+
+}
+
 .menu-deroulant a:hover {
+
   background-color: #ddd;
 
 }
 
 .montre {
-  
+
   display: block;
+
 }
-
-
 
 /* search input */
 
@@ -194,7 +212,7 @@ input[name="search"]:focus {
 form[action="header.php"] {
   display: flex;
   justify-content: center;
-} 
+}
 
 form button {
   background-color: #088178;
@@ -206,10 +224,17 @@ form button {
 
 .swiper {
   width: 100%;
-  max-height: 500px;
+  max-height: 600px;
   border: solid black 1px;
   background-color: #6A6DFF;
   margin: auto;
+
+}
+
+.swiper-wrapper {
+
+    height:75% !important;
+    min-height: 550px;
 
 }
 
@@ -364,7 +389,7 @@ form button {
   justify-content: space-around;
   padding: 3%;
   flex-flow: row wrap;
-  background:rgb(255 84 32 / 50%);
+  background: rgb(255 84 32 / 50%);
 
 }
 
@@ -439,7 +464,7 @@ form button {
 
 /* Button montre plus */
 
-.btn-montre{
+.btn-montre {
 
   background: rgb(255 84 32 / 50%);
   padding: 20px;
@@ -496,11 +521,14 @@ footer {
 .foot div {
   display: flex;
   flex-direction: column;
-  max-width: 280px; /** limiter le width de div ( wika-app div précisément ) **/
-  min-width: 229px;/** pour effectuer le wrap **/
+  max-width: 280px;
+  /** limiter le width de div ( wika-app div précisément ) **/
+  min-width: 229px;
+  /** pour effectuer le wrap **/
   flex: 1;
   font-weight: 700;
-  margin: 0 auto;/** les div va etre en centre apres wrap **/
+  margin: 0 auto;
+  /** les div va etre en centre apres wrap **/
   line-height: 2;
 }
 
@@ -572,7 +600,8 @@ footer {
   text-decoration: none !important;
   color: black !important;
 }
-.mdp{
+
+.mdp {
 
   margin: 10px auto;
   width: fit-content;
@@ -582,7 +611,7 @@ footer {
 
 }
 
-.mdp img{
+.mdp img {
 
   /** control height for the responsive **/
   height: 8vw;
@@ -676,6 +705,13 @@ img[alt="Logo-footer"] {
     height: 400px;
     justify-content: center;
     text-align: center;
+  }
+
+  .swiper-wrapper{
+
+    height: 100% !important;
+
+
   }
 
   .swiper-slide {
@@ -840,7 +876,10 @@ img[alt="Logo-footer"] {
 
 
 
-input[id='prenom-c'],input[id='nom-c'],input[id='email-c'] ,textarea {
+input[id='prenom-c'],
+input[id='nom-c'],
+input[id='email-c'],
+textarea {
 
   width: 100%;
   padding: 2%;
@@ -848,7 +887,7 @@ input[id='prenom-c'],input[id='nom-c'],input[id='email-c'] ,textarea {
   border-radius: 4px;
   margin-top: 2%;
   margin-bottom: 4%;
-  resize:none;
+  resize: none;
 
 }
 
@@ -864,10 +903,13 @@ input[id='prenom-c'],input[id='nom-c'],input[id='email-c'] ,textarea {
 
 } */
 
-input[id='prenom-c']:focus,input[id='nom-c']:focus,input[id='email-c']:focus,textarea:focus{
+input[id='prenom-c']:focus,
+input[id='nom-c']:focus,
+input[id='email-c']:focus,
+textarea:focus {
 
   outline: none;
-  
+
 }
 
 input[type=submit] {
@@ -895,7 +937,7 @@ input[type=submit]:hover {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 20px;
-  
+
 }
 
 .form-m {
@@ -908,7 +950,7 @@ input[type=submit]:hover {
 
 }
 
-.form-m > form > label > span {
+.form-m>form>label>span {
 
   color: red;
   font-weight: bold;
@@ -921,17 +963,17 @@ input[type=submit]:hover {
   color: red;
   margin-top: 10px;
   font-weight: bold;
-   
-  }
 
-  .merci {
+}
 
-    text-align: center;
-    color: rgba(255, 84, 32, 1);
-    margin-top: 10px;
-    font-weight: bold;
+.merci {
 
-  }
+  text-align: center;
+  color: rgba(255, 84, 32, 1);
+  margin-top: 10px;
+  font-weight: bold;
+
+}
 
 
 /** index ( Membre page ) **/
@@ -961,4 +1003,3 @@ color: blue;
   display: none !important;
   
   } */
-

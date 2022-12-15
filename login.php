@@ -12,7 +12,7 @@ if (isset($_POST["valider"])) {
     $password = $_POST["password"];
     $pass_crypt = md5($_POST["password"]);/* recuperer les infos entre pas l'utilisateur */
     include("connexion.php"); /* connecter a la base de donne */
-    $stmt = $pdo->prepare("select * from wika where email=? and password=? limit 1");
+    $stmt = $pdo->prepare("select * from wikausers where email=? and password=? limit 1");
     $stmt->execute(array($email, $pass_crypt));
     $user = $stmt->fetchAll();
     $userCount = $stmt->rowCount();
@@ -20,6 +20,10 @@ if (isset($_POST["valider"])) {
         $_SESSION["prenom_nom"] = ucfirst(strtolower($user[0]["prenom"])) .
         " "  .  strtoupper($user[0]["nom"]);
         $_SESSION["connecter"] = "oui";
+        $_SESSION["id"] = ($user[0]["id"]);
+        $_SESSION["nom"] = ($user[0]["nom"]);
+        $_SESSION["prenom"] = ($user[0]["prenom"]);
+        $_SESSION["email"] = ($user[0]["email"]);
     
         header("location:index.php");
     } 
@@ -93,6 +97,7 @@ a:hover {
 text-decoration: underline;
 }
 </style>
+<title>Wika/log-in</title>
 </head>
 <body>
 <h1>Authentification</h1>

@@ -10,13 +10,13 @@ elseif (empty($password)) $erreur = "Le champs mot de passe est obligatoire!";
 elseif ($password != $passwordConf) $erreur = "Mots de passe differents!";
 else {
 include("connexion.php");
-$verify_email = $pdo->prepare("select id from Wika where email=? limit 1"); // $stmt and verifying if the username exists already
+$verify_email = $pdo->prepare("select id from wikausers where email=? limit 1"); // $stmt and verifying if the username exists already
 $verify_email->execute(array($email));
 $user_email = $verify_email->fetchAll();
 if (count($user_email) > 0)
 $erreur = "email existe déjà!";
 else {
-$ins = $pdo->prepare("insert into wika(nom,prenom,email,password) values(?,?,?,?)");
+$ins = $pdo->prepare("insert into wikausers(nom,prenom,email,password) values(?,?,?,?)");
 if ($ins->execute(array($nom, $prenom, $email, md5($password))))
 header("location:login.php");
      }

@@ -1,13 +1,27 @@
+
+
+const titlePage = document.getElementsByTagName('title');  // Utilisé pour savoir dans quelle page nous sommes
+console.log(titlePage.item(0).innerHTML);
+
+
+
 //********************  Profil contenu ****************************//
 
-
-
+let carte_down_before=document.getElementsByTagName('fa-caret-down:before');
 let profil_btn=document.getElementById("profil-btn");
 
-profil_btn.onclick = function() {myFunction()};
-  function myFunction() {
-  document.getElementById("profil-contenu").classList.toggle("montre");
+console.log(carte_down_before);
+
+
+
+function myFunction() {
+    
+document.getElementById("profil-contenu").classList.toggle("montre");
+
 }
+
+carte_down_before.onclick = function() {myFunction()};
+profil_btn.onclick = function() {myFunction()};
 
 window.onclick = function(event) {
  if (!event.target.matches('.profil-btn')) {
@@ -25,10 +39,6 @@ window.onclick = function(event) {
 
 
 
-
-
-const titlePage = document.getElementsByTagName('title');  // Utilisé pour savoir dans quelle page nous sommes
-console.log(titlePage.item(0).innerHTML);
 
 
 

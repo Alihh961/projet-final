@@ -1,8 +1,23 @@
 <?php
 
+session_start();
+$wiko = '';
+
 include('functions.php');
 
-@since
+if(isset($_SESSION["connecter"])){
+    // $log_in='';
+    $username = $_SESSION["prenom_nom"];
+
+    // affichager de btn de profil et cache log-in 
+    $wiko ='<style>.profil-btn { display:inline-block;}</style>'.'<style>#log-in { display:none;}</style>';
+    
+
+
+};
+
+
+
 
 ?>
 
@@ -23,31 +38,50 @@ include('functions.php');
     <title>Wika / Catalogue</title>
 </head>
 <body>
+
+<?php echo $wiko ?> 
+
     
-    <header>
-        <a href="index.html" class="logo-con"><img src="imgs/WIKA_Logo.svg.png" alt="Logo" class="logo"></a>
- 
-         <nav id="nav">
-             <ul class="menu">
+<header>
+       <a href="index.html" class="logo-con"><img src="imgs/WIKA_Logo.svg.png" alt="Logo" class="logo"></a>
+
+        <nav id="nav">
+            <ul class="menu">
                 <li><a href="#" id="ferm-menu">X</a></li>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php" class="active">Shop</a></li>
-                <!-- <li><a href="blog.php">Blog</a></li> -->
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="login.php">Login</a></li>
-             </ul>
-             <!-- <div class="srch">
-                 <form action="header.php" method="POST">
-                     <input type="text" placeholder="Search..." name="search" autocomplete="off" size="20">
-                     <button type="submit"><i class="fa fa-search"></i></button>
-                 </form>
-             </div> -->
-         </nav>
- 
-         <a href="#nav"><i class="fa-solid fa-bars" id="ouvre-nav"></i></a>
-     </header>
- 
+                <li><a id="log-in" href="login.php">Log-in</a></li>
+                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+            </ul>
+
+            <div class="menu-deroulant">
+
+                <button class="profil-btn" id="profil-btn"><?php echo $username?><i class="fa fa-caret-down"></i></button>
+                
+                <div class="profil-contenu" id="profil-contenu">
+                    <a href="edit_profil.php">Editer le profil</a>
+                    <a href="#">Commandes en cours</a>
+                    <a href="#">Commandes Passé</a>
+                    <a href="deconnexion.php">Deconnecter</a>
+
+                   
+                </div>
+
+            </div>
+
+            <div class="srch">
+                <form action="header.php" method="POST">
+                    <input type="text" placeholder="Search..." name="search" autocomplete="off" size="20">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
+
+        <a href="#nav"><i class="fa-solid fa-bars" id="ouvre-nav"></i></a>
+    </header>
+
     <section id="ban-haut-shop">
         <!-- <img  src="imgs/banniere-haut-shop.jpg" alt="Banniere-haut"> -->
     </section>
